@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo radio 带默认值</title>
+	
+	<link rel="stylesheet" type="text/css" href="../css/msPickStyle.css">
+
+</head>
+<body>
+	<style type="text/css">
+		h3{font-size: 24px; padding: 8px 0 ; }
+		body > div, h3{margin: 0 auto; text-align: center;}
+	</style>
+	<h3>地区：</h3>
+	<div class="p-data-wrap" id="p-data-wrap" style="z-index:3"></div>
+
+	<h3>行业：</h3>
+	<div class="p-data-wrap" id="p-data-wrap1" style="z-index:2"></div>
+
+	<h3>职能：</h3>
+	<div class="p-data-wrap" id="p-data-wrap2" style="z-index:1"></div>
+	
+
+	<script type="text/javascript" src="../../../gallery/jquery-1.7.2.min.js"></script>
+
+	<script type="text/javascript" src="../js/cityData.js"></script>
+	<script type="text/javascript" src="../js/industryData.js"></script>
+	<script type="text/javascript" src="../js/functionData.js"></script>
+
+	<script type="text/javascript" src="../js/msCityPlugin.js"></script>
+	<script type="text/javascript" src="../js/msIndustryPlugin.js"></script>
+	<script type="text/javascript" src="../js/msFunctionPlugin.js"></script>
+
+	<script type="text/javascript">
+
+	$(function(){
+        
+        var start = new Date();
+        $("#p-data-wrap2").msJobPlugin({
+			type:'job',	//根据它控制input的name city/cityCode,数据等
+			check:'radio',	//单选/多选
+			column:3,
+			init:[
+					{
+						"code":"0101001",
+						"name":"销售代表"
+					}
+				],
+			style:{
+				"foldHeadWidth":"165px",
+				"msCbComponent":"170px",
+				"msOkWidth":"200px"
+			},
+			align:"right"
+		});
+                var end = new Date();
+                alert('function pick cost:'+(end-start));
+
+        var start = new Date();
+		$("#p-data-wrap").msCityPlugin({
+			type:'city',	//根据它控制input的name city/cityCode,数据等
+			check:'radio',	//单选/多选
+			column:6,		//列数
+			comData:{			//常用数据
+					"nodes": 
+						[
+							{
+								"code": "CN-13-石家庄",	//可查看 defaultValue()函数里面注释掉的代码
+								"name":"石家庄"
+							},
+							{
+								"code": "CN-13-唐山",
+								"name":"唐山"
+							},
+							{
+								"code": "CN-32-南京",
+								"name":"南京"
+							},
+							{
+								"code": "CN-32-无锡",
+								"name":"无锡"
+							}
+						]
+					},
+			init:[
+					{				//初始值
+						"code":"石家庄",
+						"name":"石家庄"
+					}
+				]
+		});
+
+        var end = new Date();
+                alert('city pick cost:'+(end-start));
+
+var start = new Date();
+$("#p-data-wrap1").msIndustryPlugin({
+			type:'industry',	//根据它控制input的name city/cityCode,数据等
+			check:'radio',	//单选/多选
+			column:3,		//列数
+			comData:{
+						"nodes": 
+							[
+								{
+						            "code": "101",
+						            "name": "计算机软/硬件"
+						        },
+						        {
+						            "code": "102",
+						            "name": "互联网/电子商务/IT服务"
+						        },
+						        {
+						            "code": "103",
+						            "name": "网游"
+						        },
+						        {
+						            "code": "104",
+						            "name": "通讯(设备/运营/增值服务)"
+						        }
+							]
+					},
+			init:[
+					{
+						"code":"101",
+						"name":"计算机软/硬件"
+					}
+				],
+			style:{
+				"foldHeadWidth":"170px",
+				"msCbComponent":"265px",
+				"msOkWidth":"250px"
+			}
+		});
+     var end = new Date();
+                alert('city pick cost:'+(end-start));
+		
+	
+	})
+
+	</script>
+</body>
+</html>

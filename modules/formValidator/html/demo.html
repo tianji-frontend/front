@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>表单验证</title>
+<link href="../css/formValidator.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../../../styles/base.css" type="text/css" >
+<link rel="stylesheet" href="../../dropBox/css/selector.css" type="text/css" >
+</head>
+<body>
+<div class="wrap" id="wrap">
+    <form method="get" action="" data-validation="true" class="valForm">
+        <label>用户名：</label><input type="text" id="name" name="name" placeholder="用户名" validation-config="{'checking':['required', 'maxSize', 'minSize'],'init':[true, 20, 5],'name':'用户名','leftTop':'165,5'}" class="vFormText" /><br />
+        <label>密　码：</label><input type="password" id="password" name="password" placeholder="密码" validation-config="{'checking':['maxSize', 'required', 'minSize'],'init':[20,true,  6],'name':'密码'}" class="vFormText" /><br />
+        <label>确　认：</label><input type="password" placeholder="确认密码" validation-config="{'checking':['required', 'compare'],'init':[true,'password'],'name':'确认密码'}" class="vFormText" /><br />
+        <label>邮　箱：</label><input type="text" id="email" name="email" placeholder="邮箱" validation-config="{'checking':['email'],'init':[true],'name':'电子邮箱'}" class="vFormText" /><br />
+        <label>地　址：</label><input type="text" id="address" name="address" placeholder="地址" class="vFormText" /><br />
+        <label>年　龄：</label><input type="text" id="old" name="old" placeholder="年龄" class="vFormText" validation-config="{'checking':['max', 'min'],'init':[110, 10],'name':'年龄'}" /><br />
+        <label>电　话：</label><input type="text" id="phone" name="phone" placeholder="电话" class="vFormText" validation-config="{'checking':['phone'],'init':[true],'name':'电话'}" /><br />
+        <label>手　机：</label><input type="text" id="mobilePhone" name="mobilePhone" placeholder="手机" class="vFormText" validation-config="{'checking':['mobilePhone'],'init':[true],'name':'手机'}" /><br />
+        <label>兴趣爱好：</label><input type="checkbox" id="hobby1" name="hobby" validation-config="{'checking':['required', 'maxSize', 'minSize'],'init':[true,3,2],'name':'兴趣爱好','leftTop':'290 0'}" value="台球" /><label for="hobby1">台球</label> <input type="checkbox" id="hobby2" name="hobby" value="足球" /><label for="hobby2">足球</label> <input type="checkbox" id="hobby3" name="hobby" value="羽毛球" /><label for="hobby3">羽毛球</label> <input type="checkbox" id="hobby4" name="hobby" value="篮球" /><label for="hobby4">篮球</label> <input type="checkbox" id="hobby5" name="hobby" value="高尔夫球" /><label for="hobby5">高尔夫球</label>
+        <br />
+        <label>性别：</label><input type="radio" id="male" name="sex" validation-config="{'checking':['required'],'init':[true],'name':'性别','leftTop':'80 0'}" /><label for="male">男</label> <input type="radio" id="female" name="sex" /><label for="female">女</label>
+        <br />
+        <div class="clearfix" style="clear:both;height:0px;line-height:0;overflow:hidden;"></div>
+        <div id="wml-p-data-wrap" class="wml-p-data-wrap"></div>
+        <div class="clearfix" style="clear:both;height:0px;line-height:0;overflow:hidden;"></div>
+        <label>职业职能：</label>
+        <select name="zn" id="zn" validation-config="{'checking':['required'],'init':[true],'name':'职业职能'}">
+            <option>请选择职业职能</option>
+            <option value="00101">这是啥啊？！</option>
+            <option value="00101">aaaaaaaaaaaaaaaaaaaaaa</option>
+            <option value="00101">bbbbbbbbbbbbbbb</option>
+            <option value="00101">ccccccccccccccccc</option>
+            <option value="00101">dddddddd</option>
+        </select>
+        <br />
+        <input type="submit" id="submit" value="提交" style="padding:5px 10px;" />
+    </form>
+</div>
+<script type="text/javascript" src="http://192.168.3.235:8080/frontend/dist/common/initJs.min.js?jquery-1.7.2.min=192.168.3.235:8080/frontend/gallery/&formValidator=192.168.3.235:8080/frontend/modules/formValidator/js/&dropBox-not-use-seajs=192.168.3.235:8080/frontend/modules/dropBox/js/&clearCache=1.0.3-dev" id="pageScriptInit"></script><!--
+
+
+<script type="text/javascript" src="../../../gallery/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../js/formValidator.js"></script>
+<script type="text/javascript" src="../../dropBox/js/dropBox-not-use-seajs.js"></script>-->
+
+
+<script type="text/javascript">
+$(function (){
+    $('form').formValidator();
+    $('#wml-p-data-wrap').dropBox({
+        name: 'salary',
+        required: true
+    });
+});
+</script>
+</body>
+</html>

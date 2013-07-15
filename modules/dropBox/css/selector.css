@@ -1,0 +1,33 @@
+#wrap {margin:20px;}
+.wml-p-data-wrap {font-size:12px;border:1px solid;border-color:#c6c6c6 #eee #eee #c6c6c6;margin-bottom:10px;height:30px;line-height:30px;width:150px;padding:0 10px;position:relative; background:#fefefe;float:left;margin-right:10px;overflow:hidden;}
+.wml-p-data-wrap .dropBox {position:absolute;top:30px;left:-1px;width:400px;border:1px solid #ccc;background:#fff;z-index:999;}
+div label {vertical-align:middle;position:relative;top:-4px;color:#666;}
+.wml-p-data-wrap .dropBox em.close {color:#f30;position:absolute;right:10px;top:8px;font:bold 14px/15px 'Arial' normal;cursor:pointer;}
+.wml-p-data-wrap input.dftTxt {border:none;background:none;outline:none;height:30px;line-height:30px;margin-left:0;cursor:default;*margin-left:-20px;}
+.wml-p-data-wrap em.dropArr,.dropList li em.selected {display:block;width:11px;height:6px;background:url(../images/dropIcons.png) -5px -31px no-repeat;position:absolute;right:10px;top:10px;_background:url(../images/dropicons.gif) -5px -31px no-repeat;overflow:hidden;}
+.wml-p-data-wrap em.dropArrUp {background-position:-5px -7px;_background-position:-5px -7px;}
+.dropList {position:absolute;background-color:#f9f9f9;border:1px solid;border-color:#f9f9f9 #eee #eee #c6c6c6;z-index:999;overflow:hidden;}
+.dropList li {height:30px;line-height:30px;padding-left:10px;font-size:12px;position:relative;padding-right:20px;overflow:hidden;cursor:pointer;}
+.dropList li.even {background-color:#fefefe;}
+.dropList li em.selected {background-position:-5px -56px;height:8px;right:10px;}
+.dropList li:hover,.dropList li.cur {background-color:#ececec;color:#000;}
+.dropList li.disabled {cursor:not-allowed;color:#aaa;}
+.data-sub-error {
+	background-color:#ffb9b9;
+	-webkit-animation:flash 1s .2s ease both;
+	-moz-animation:flash 1s .2s ease both;}
+	@-webkit-keyframes flash{
+	25%,50%,100%{opacity: 1;}
+	25%,75%{opacity: 0;}
+}
+@-webkit-keyframes flash{
+25%,50%,100%{opacity: 1;}
+25%,75%{opacity: 0;}
+}
+@-moz-keyframes flash{
+25%,50%,100%{opacity: 1;}
+25%,75%{opacity: 0;}
+}
+/*提交按钮样式，临时*/
+.subCon {clear:both;}
+.subCon input {width:80px;height:30px;}
