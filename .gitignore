@@ -1,6 +1,26 @@
-*.class
+.project
 
-# Package Files #
-*.jar
-*.war
-*.ear
+.settings
+
+.class
+path
+
+target
+
+bin
+
+.bak
+
+.DS_Store
+
+dist
+
+node_modules
+
+compress
+
+.build
+
+Gruntfile_CMD.js
+
+.log

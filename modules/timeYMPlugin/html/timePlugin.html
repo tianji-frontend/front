@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>测试文档</title>
+<link href="../css/base.css" rel="stylesheet" type="text/css" />
+<link href="../css/timeYM.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="wrap">
+    <input type="text" id="start_date_y" maxlength="4" size="4" /> <span class="txt">年</span>
+    <input type="text" id="start_date_m" maxlength="2" size="4" /> <span class="txt">月</span>
+    
+    至 
+    <input type="text" id="end_date_y" maxlength="4" size="4" /> <span class="txt">年</span>
+    <input type="text" id="end_date_m" maxlength="2" size="4" /> <span class="txt">月</span>
+    <!--<span class="modifyEndYM" title="修改结束年月">[现在]</span>
+    <input id="sinceNow" name="sinceNow" type="hidden" />-->
+</div>
+<script type="text/javascript" src="../../../gallery/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../js/timeYMPlugin.js"></script>
+<script type="text/javascript">
+$('#start_date_y').timeYM();
+$('#start_date_m').timeYM({
+    type: 'month',
+    title: '开始月份'
+});
+$('#end_date_y').timeYM({
+    title: '结束年份',
+    seType: 'end'
+});
+$('#end_date_m').timeYM({
+    type: 'month',
+    title: '结束月份',
+    seType: 'end'
+});
+</script>
+</body>
+</html>

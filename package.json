@@ -1,0 +1,18 @@
+{
+  "name": "common",
+  "version": "1.0.8-dev",
+  "description": "tianji common javascript project",
+  "main": "Gruntfile.js",
+  "author": "wumingli",
+  "dependencies": {
+    "jquery": "~1.7.2"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-compress": "~0.5.0",
+    "grunt-cmd-transport": "~0.2.3",
+    "grunt-cmd-concat": "~0.2.2",
+    "grunt-contrib-uglify": "~0.2.1",
+    "grunt-contrib-clean": "~0.4.1"
+  }
+}
