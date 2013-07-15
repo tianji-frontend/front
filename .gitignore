@@ -13,8 +13,7 @@ bin
 
 .DS_Store
 
-.build
 
-Gruntfile_CMD.js
+.build
 
 .log
